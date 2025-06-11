@@ -3,15 +3,16 @@
     import { computed } from 'vue';
 
     const route = useRoute();
-    const courseId = computed(() => route.params.courseId);
+    // const courseId = computed(() => route.params.courseId);
+    const courses = computed(() => route.params.courses);
 
-    console.log(route.params.courseId)
 </script>
 
 <template>
   <div class="about">
     <!-- <h1>Bienvenido al curso: {{ $route.params.courseId }}</h1> -->
-    <h1>Bienvenido al curso: {{ courseId }}</h1>
+    <!-- <h1>Bienvenido al curso: {{ courseId }}</h1> -->
+    <h1>Bienvenido al curso: {{ courses }}</h1>
   </div>
 </template>
 

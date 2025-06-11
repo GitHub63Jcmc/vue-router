@@ -9,8 +9,10 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+    // /courses
+    // /courses/1
     {
-      path: '/courses/:courseId',
+      path: '/courses/:courses?',
       component: () => import('../views/CouseShowView.vue'),
     },
     {
