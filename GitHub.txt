@@ -1,0 +1,21 @@
+Sincronización desde local a GitHub (subir cambios)
+Cada vez que hagas cambios en tu código, usa estos comandos en orden:
+
+git add .
+git commit -m "Descripción de los cambios"
+git push
+
+----------------------------------------------------------------------------
+ Sincronización desde GitHub a tu PC (bajar cambios)
+
+Si haces cambios directamente en GitHub (por ejemplo, editas un archivo
+online o colaboras con alguien), puedes actualizar tu copia local con:
+
+git pull
+
+----------------------------------------------------------------------------
+Recomendaciones útiles
+    Haz git pull al comenzar el día (por si hay cambios remotos).
+    Haz git push después de cada sesión de trabajo para mantener el backup en GitHub.
+    Si no hay cambios locales, puedes hacer solo git pull sin problemas.
+    Evita editar el mismo archivo en GitHub y local al mismo tiempo para evitar conflictos.
