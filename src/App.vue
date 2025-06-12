@@ -11,10 +11,7 @@
 
         <RouterLink :to="{
           name: 'courses',
-          params: {
-            courses: 1
-          }
-        }">Curso 1</RouterLink>
+        }">Cursos</RouterLink>
 
         <RouterLink :to="{
           name: 'about'

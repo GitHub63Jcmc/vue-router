@@ -11,9 +11,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/courses/:courses',
+      path: '/courses',
       name: 'courses',
-      component: () => import('../views/CouseShowView.vue'),
+      component: () => import('../views/CourseView.vue'),
+    },
+    {
+      path: '/courses/:courseId',
+      name: 'courseDetail',
+      component: () => import('../views/CouseDetailView.vue'),
     },
     {
       path: '/nosotros',
