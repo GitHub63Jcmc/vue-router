@@ -10,18 +10,34 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+    // {
+    //   path: '/courses',
+    //   name: 'courses',
+    //   component: () => import('../views/CourseView.vue'),
+    // },
+    // {
+    //   path: '/courses/:courseId',
+    //   name: 'courseDetail',
+    //   component: () => import('../views/CouseDetailView.vue'),
+    // },
     {
       path: '/courses',
-      name: 'courses',
-      component: () => import('../views/CourseView.vue'),
+      component: () => import('../views/CourseLayoutView.vue'),
+      children: [
+        {
+          path: '',
+          name: 'courses',
+          component: () => import('../views/CourseView.vue'),
+        },
+        {
+          path: '/:courseId',
+          name: 'courseDetail',
+          component: () => import('../views/CourseDetailView.vue'),
+        },
+      ]
     },
     {
-      path: '/courses/:courseId',
-      name: 'courseDetail',
-      component: () => import('../views/CouseDetailView.vue'),
-    },
-    {
-      path: '/nosotros',
+      path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),
     },
